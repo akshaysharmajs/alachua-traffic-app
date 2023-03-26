@@ -10,7 +10,8 @@ def homepage(request):
     return HttpResponse('HomePage')
 
 class EventViewSet(viewsets.ModelViewSet):
-    load_crash()
+    if len(Event.objects.all()) == 0:
+        load_crash()
 
     # define queryset
     queryset = Event.objects.all()
@@ -19,7 +20,8 @@ class EventViewSet(viewsets.ModelViewSet):
     serializer_class = EventSerializer
 
 class VehicleViewSet(viewsets.ModelViewSet):
-    load_vehicle()
+    if len(Vehicle.objects.all()):
+        load_vehicle()
 
     # define queryset
     queryset = Vehicle.objects.all()
@@ -28,8 +30,8 @@ class VehicleViewSet(viewsets.ModelViewSet):
     serializer_class = VehicleSerializer
 
 class DriverViewSet(viewsets.ModelViewSet):
-
-    load_driver()
+    if len(Driver.objects.all()) == 0:
+        load_driver()
     # define queryset
     queryset = Driver.objects.all()
       
