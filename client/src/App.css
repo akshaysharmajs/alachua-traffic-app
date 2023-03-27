@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.pin-text {
+    color: red;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100px; height: 20px
+}
+
+.big-icon {
+  color: red;
+}

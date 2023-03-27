@@ -30,7 +30,8 @@ body {
 .split-pane-left {
   flex: 1;
   overflow: hidden;
-  padding: 1%;
+  padding: 2%;
+  justify-content: space-around;
 
 }
 
@@ -73,6 +74,7 @@ ul a:hover {
 
 .navbar {
   box-shadow: 0 4px 4px 0 rgba(36, 34, 34, 0.2);
+  display: flex;
 }
 
 .navbar-brand {
@@ -81,3 +83,7 @@ ul a:hover {
   font-size: x-large;
 }
 
+.p {
+  font-size: xx-large;
+  font-weight: bold;
+}

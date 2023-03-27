@@ -7,6 +7,7 @@ import QuoteContext from "./components/QuoteContext";
 import "./App.css";
 import { Container, Navbar } from 'react-bootstrap';
 
+
 function App() {
   
 
@@ -15,7 +16,7 @@ function App() {
 
       <Navbar bg='dark' expand='lg' variant='light'>
         <Container>
-            <Navbar.Brand>Alachua Traffic Safety Dashboard</Navbar.Brand>
+            <Navbar.Brand>ALACHUA TRAFFIC SAFETY DASHBOARD</Navbar.Brand>
         </Container>
       </Navbar>
 

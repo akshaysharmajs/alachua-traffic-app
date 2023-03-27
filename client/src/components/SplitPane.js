@@ -86,8 +86,60 @@ export const SplitPaneLeft = (props) => {
     topRef.current.style.maxWidth = clientWidth + "px";
   });
 
+      //IMPORT DRIVER DATA FROM DJANGO SERVER
+      const [driver_data, setDriverData] = useState();
+
+      // Fetch data --> 1.)
+      useEffect(() => {
+    
+          fetch(`http://127.0.0.1:8000/api/driver/`, {
+              method: 'GET',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+          })
+          .then((res) => res.json())
+          .then((data) => {
+              const value = data;
+              localStorage.setItem('driver', JSON.stringify(value));
+              setDriverData(JSON.stringify(value));
+            });
+    
+      }, [setDriverData]);
+    
+      const drivers = JSON.parse(localStorage.getItem('driver'));
+    
+
   return (<div {...props} className="split-pane-left" ref={topRef}>
-    <Chart/>
+    <Chart drivers={drivers}/>
+    <br>
+    </br>
+    <br>
+    </br>
+    <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><b>Accident Prone Areas</b></h5>
+        <ul class="list-group">
+  <li class="list-group-item ">SW 34th Street</li>
+  <li class="list-group-item">Target Parking Lot</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><b>Investigation Agencies</b></h5>
+        <ul class="list-group">
+  <li class="list-group-item ">Gainesville Police Dept.</li>
+  <li class="list-group-item">Florida Highway Patrol</li>
+</ul>
+      </div>
+    </div>
+  </div>
+</div>
   </div>)
 };
 
