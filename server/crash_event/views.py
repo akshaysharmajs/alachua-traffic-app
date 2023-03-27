@@ -20,7 +20,7 @@ class EventViewSet(viewsets.ModelViewSet):
     serializer_class = EventSerializer
 
 class VehicleViewSet(viewsets.ModelViewSet):
-    if len(Vehicle.objects.all()):
+    if len(Vehicle.objects.all()) == 0:
         load_vehicle()
 
     # define queryset

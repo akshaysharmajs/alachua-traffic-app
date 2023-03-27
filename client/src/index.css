@@ -78,7 +78,7 @@ ul a:hover {
 }
 
 .navbar-brand {
-  font-family:'Courier New', Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: white;
   font-size: x-large;
 }
@@ -86,4 +86,12 @@ ul a:hover {
 .p {
   font-size: xx-large;
   font-weight: bold;
+}
+
+.list-group-item {
+  background-color: rgb(142, 220, 195);
+}
+
+.card {
+  background-color: rgb(233, 237, 235);
 }

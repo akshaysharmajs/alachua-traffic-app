@@ -122,7 +122,7 @@ export const SplitPaneLeft = (props) => {
       <div class="card-body">
         <h5 class="card-title"><b>Accident Prone Areas</b></h5>
         <ul class="list-group">
-  <li class="list-group-item ">SW 34th Street</li>
+  <li class="list-group-item">SW 34th Street</li>
   <li class="list-group-item">Target Parking Lot</li>
 </ul>
       </div>
